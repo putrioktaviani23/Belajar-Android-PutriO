@@ -4,27 +4,25 @@ import androidx.appcompat.app.AppCompatActivity;
 import androidx.appcompat.widget.Toolbar;
 
 import android.content.Intent;
+import android.graphics.PorterDuff;
 import android.os.Bundle;
 import android.view.Menu;
 import android.view.MenuItem;
-import android.view.View;
-import android.widget.Toast;
 
 import com.example.newapps.utils.Tools;
 
-import org.w3c.dom.Comment;
-
-public class DetailNewsActivity extends AppCompatActivity {
+public class CommentActivity extends AppCompatActivity {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_detail_news);
+        setContentView(R.layout.activity_comment);
         initToolbar();
     }
-
     private void initToolbar() {
         Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
+        toolbar.setNavigationIcon(R.drawable.ic_menu);
+        toolbar.getNavigationIcon().setColorFilter(getResources().getColor(R.color.grey_60), PorterDuff.Mode.SRC_ATOP);
         setSupportActionBar(toolbar);
         getSupportActionBar().setTitle(null);
         getSupportActionBar().setDisplayHomeAsUpEnabled(true);
@@ -34,7 +32,7 @@ public class DetailNewsActivity extends AppCompatActivity {
 
     @Override
     public boolean onCreateOptionsMenu(Menu menu) {
-        getMenuInflater().inflate(R.menu.menu_search, menu);
+        getMenuInflater().inflate(R.menu.menu_back_home, menu);
         Tools.changeMenuIconColor(menu, getResources().getColor(R.color.grey_60));
         return true;
     }
@@ -43,8 +41,8 @@ public class DetailNewsActivity extends AppCompatActivity {
     @Override
     public boolean onOptionsItemSelected(MenuItem item) {
 
-       if(item.getItemId()==R.id.action_comment){
-           startActivity(new Intent(DetailNewsActivity.this, CommentActivity.class));
+        if(item.getItemId()==R.id.action_home){
+            startActivity(new Intent(CommentActivity.this, MainActivity.class));
 
         }
         return super.onOptionsItemSelected(item);

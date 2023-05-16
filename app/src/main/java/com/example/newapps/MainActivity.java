@@ -24,6 +24,14 @@ public class MainActivity extends AppCompatActivity {
                 startActivity(new Intent(MainActivity.this, NewsActivity.class));
             }
         });
+
+        LinearLayout btn_entertain = findViewById(R.id.btn_entertain);
+        btn_entertain.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                startActivity(new Intent(MainActivity.this, SubKategoriActivity.class));
+            }
+        });
     }
 
     private void initToolbar() {

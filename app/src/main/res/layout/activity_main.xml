@@ -117,7 +117,7 @@
                             <TextView
                                 android:layout_width="wrap_content"
                                 android:layout_height="wrap_content"
-                                android:text="Welcome"
+                                android:text="STKIP Rosalia Lampung"
                                 android:textAppearance="@style/TextAppearance.AppCompat.Subhead"
                                 android:textColor="@color/grey_60"
                                 android:textStyle="bold" />
@@ -125,7 +125,7 @@
                             <TextView
                                 android:layout_width="wrap_content"
                                 android:layout_height="wrap_content"
-                                android:text="Go Decoration"
+                                android:text="Kampus Saya"
                                 android:textAppearance="@style/TextAppearance.AppCompat.Caption"
                                 android:textColor="@color/red_300" />
 
@@ -290,6 +290,7 @@
                         </LinearLayout>
 
                         <LinearLayout
+                            android:id="@+id/btn_entertain"
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:gravity="center"
@@ -305,7 +306,7 @@
                                 android:layout_width="wrap_content"
                                 android:layout_height="wrap_content"
                                 android:layout_marginTop="@dimen/spacing_small"
-                                android:text="Contact Us"
+                                android:text="Entertain"
                                 android:textAppearance="@style/TextAppearance.AppCompat.Caption"
                                 android:textColor="@color/grey_40" />
 
